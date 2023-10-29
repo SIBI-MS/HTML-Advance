@@ -1,0 +1,153 @@
+<!-- Program 5: Create a form with at least 5 form elements and appropriate
+validation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Form</title>
+    <style>
+        body {
+            height: 50rem;
+            background-image: url("img.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px 25px;
+            width: 100%;
+        }
+
+        .main {
+            width: 70%;
+            padding-left: 17rem;
+            padding-top: 10px;
+        }
+
+        .btn {
+            padding: 0.4rem 1.2rem;
+            background-color: dodgerblue;
+            color: white;
+            border-radius: 10px;
+        }
+
+        .info {
+            padding: 1rem;
+        }
+
+        fieldset {
+            padding: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        input[type="file"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <center>
+        <h1>COLLEGE ADMISSION FORM</h1>
+    </center>
+    <center>
+        <h4>Enter your admission information below</h4>
+    </center>
+    <div class="info">
+        <form method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first_name" required /><br /><br />
+                <label for="middle-name">Middle Name:</label>
+                <input type="text" id="middle-name" name="middle_name" /><br /><br />
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last_name" required /><br /><br />
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="date_of_birth" required /><br /><br />
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required />
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other" />
+                <label for="other">Other</label><br /><br />
+                <label for="address">Address:</label><br />
+                <textarea id="address" name="address" rows="4" cols="50" required></textarea><br /><br />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required /><br /><br />
+                <label for="Mobile number">Mobile number:</label>
+                <input type="tel" minlength="10" maxlength="10" name="mobile_number" required><br>
+            </fieldset>
+            <fieldset style="margin-top: 40px; padding: 1rem;">
+                <legend>Education Information</legend>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>SI No.</th>
+                        <th>Examination</th>
+                        <th>Board</th>
+                        <th>Percentage</th>
+                        <th>Year of Passing</th>
+                        <th>Upload Marklist</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Class X</td>
+                        <td><input type="text" name="boardx" required></td>
+                        <td><input type="text" name="perx" required></td>
+                        <td><input type="number" min="1900" max="2099" step="1" name="yearx" required/></td>
+                        <td><input type="file" id="myFilex" name="filenamex" required /></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Class XII</td>
+                        <td><input type="text" name="boardxii" required /></td>
+                        <td><input type="text" name="perxii" required/></td>
+                        <td><input type="number" min="1900" max="2099" step="1" name="yearxii" required/></td>
+                        <td><input type="file" id="myFilexii" name="filenamexii" /></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+            <div style="margin-top: 1rem;">
+                <input type="checkbox" value="ok" required/>
+                <label> I have read and agreed to the terms and conditions</label><br />
+                <center><input type="submit" class="btn" value="Submit" /></center>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
